@@ -15,26 +15,55 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 */
 
 /* VARIÁVEIS */
+
+
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, summary, footer, main, aside, section{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+list-style-type: none;
+}
 :root{
-  
+  --color-gray:#808080;
+  --color-background:#141414;
 }
 
 /*BODY*/
 	body{
-		background-color: #141414;
-		color:#808080;
+		background-color: var(--color-background);
+		color:var(--color-gray);
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	}
+
 
 /*TOPO*/
 	header.topo{
 		display: flex;
-		justify-content: flex-start;
-		width: 150px;
+		justify-content: center;
+		width: 100%;
+		padding:20px;
 	}
-
-/*RODAPÉ*/
+	.topo img {
+		width:80px;
+	}
+	header h2 {
+		color:white;
+	}
 	
+/*RODAPÉ*/
+	button {
+		width: 110px;
+		height: 50px;
+		font-size: 12px;
+		background-color: gray;
+		color: white;
+		border-radius: 5px;
+		border:1px hidden;
+	}
+	button:hover{
+		border:1px solid white
+	}
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
@@ -45,20 +74,31 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		align-items: center;
 	}
 	.box {
-		
+		display: flex;
+		flex-direction: column;
+		text-align: center;
 	}
 	.usuarios {
-		display: flex;
-		flex-flow: row nowrap;
+	    display: flex;
 		justify-content: center;
 		align-items: center;
-		width: ;
+		width: 858px;
+		flex-direction: column;
+	
+	}
+	.usuario_box {
+		display: flex;
+		flex-direction: row;
 	}
 	li figcaption {
 		display:none;
 	}
 	li figure img {
 		width: 80px;
+		border:1px hidden;
+	}
+	ul {
+		padding: 20px;
 	}
 	ul li {
 		width: 186px;
@@ -68,3 +108,16 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		align-items: center;
 		justify-content: center;
 	}
+	li figure img:hover {
+		border:1px solid white;
+	}
+
+
+	@media (min-width: 600px) {
+		.usuarios {
+			flex-direction: row;
+		}
+
+
+	 }
+}
