@@ -89,6 +89,7 @@ list-style-type: none;
 	.usuario_box {
 		display: flex;
 		flex-direction: row;
+		width: 186px;
 	}
 	li figcaption {
 		display:none;
